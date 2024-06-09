@@ -141,14 +141,14 @@
         x3Y/jbicmOp/AYoZGf7IKqJyAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnMeun.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAFNJREFUSEtj
         GAUkgf///7vTGFuALKE1OEs3S4xpjDWgMTMKBhMARsw1GuPVdEvCS2iMm6GBNgoGEwBGTBqNcSDdkjCt
         AdgSERpjAWjMjAJiAAMDAMeA7b3BKgdoAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="companyLogo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAIAAADwf7zUAAAABGdBTUEAALGPC/xhBQAA/8dJREFUeF7s
         nQeAJDl1/jWpJ0+nSRtv9zbdAQdHztEEY7DJxoBNMjZgosGASbb/BgwGDCYcOWeMMeFMBpPPgIEj3sFx

@@ -33,9 +33,9 @@ namespace ITP4915MProject
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMainPage));
             this.btn_SalesManagement = new System.Windows.Forms.Button();
             this.TopLeftpannel = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblSystemName = new System.Windows.Forms.Label();
+            this.btnMeun = new System.Windows.Forms.Button();
+            this.companyLogo = new System.Windows.Forms.PictureBox();
             this.btnInventory = new System.Windows.Forms.Button();
             this.btnFrmDispatchNoteList = new System.Windows.Forms.Button();
             this.btnItemManagment = new System.Windows.Forms.Button();
@@ -47,10 +47,10 @@ namespace ITP4915MProject
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.Lbl_Data = new System.Windows.Forms.Label();
+            this.topRemovableBar = new System.Windows.Forms.Panel();
+            this.LblData = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.timerTime = new System.Windows.Forms.Timer(this.components);
             this.Slidetimer1 = new System.Windows.Forms.Timer(this.components);
             this.SalseTimer = new System.Windows.Forms.Timer(this.components);
@@ -63,17 +63,17 @@ namespace ITP4915MProject
             this.panelContainer = new System.Windows.Forms.Panel();
             this.panMain = new System.Windows.Forms.Panel();
             this.TopLeftpannel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyLogo)).BeginInit();
             this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.topRemovableBar.SuspendLayout();
             this.SalesContainer.SuspendLayout();
             this.panelLeft.SuspendLayout();
+            this.panMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_SalesManagement
             // 
             this.btn_SalesManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
-            this.btn_SalesManagement.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_SalesManagement.FlatAppearance.BorderSize = 0;
             this.btn_SalesManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SalesManagement.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -81,9 +81,10 @@ namespace ITP4915MProject
             this.btn_SalesManagement.Image = ((System.Drawing.Image)(resources.GetObject("btn_SalesManagement.Image")));
             this.btn_SalesManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_SalesManagement.Location = new System.Drawing.Point(0, 0);
-            this.btn_SalesManagement.MinimumSize = new System.Drawing.Size(298, 45);
+            this.btn_SalesManagement.MaximumSize = new System.Drawing.Size(294, 45);
+            this.btn_SalesManagement.MinimumSize = new System.Drawing.Size(294, 45);
             this.btn_SalesManagement.Name = "btn_SalesManagement";
-            this.btn_SalesManagement.Size = new System.Drawing.Size(298, 45);
+            this.btn_SalesManagement.Size = new System.Drawing.Size(294, 45);
             this.btn_SalesManagement.TabIndex = 1;
             this.btn_SalesManagement.Text = "     Sales Management";
             this.btn_SalesManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -93,49 +94,49 @@ namespace ITP4915MProject
             // TopLeftpannel
             // 
             this.TopLeftpannel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
-            this.TopLeftpannel.Controls.Add(this.label5);
-            this.TopLeftpannel.Controls.Add(this.button2);
-            this.TopLeftpannel.Controls.Add(this.pictureBox1);
+            this.TopLeftpannel.Controls.Add(this.lblSystemName);
+            this.TopLeftpannel.Controls.Add(this.btnMeun);
+            this.TopLeftpannel.Controls.Add(this.companyLogo);
             this.TopLeftpannel.Location = new System.Drawing.Point(0, 0);
             this.TopLeftpannel.Margin = new System.Windows.Forms.Padding(0);
             this.TopLeftpannel.Name = "TopLeftpannel";
             this.TopLeftpannel.Size = new System.Drawing.Size(294, 149);
             this.TopLeftpannel.TabIndex = 0;
             // 
-            // label5
+            // lblSystemName
             // 
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(36, 74);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(254, 60);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Order Processing and Stock Recording System";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSystemName.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
+            this.lblSystemName.ForeColor = System.Drawing.Color.White;
+            this.lblSystemName.Location = new System.Drawing.Point(36, 74);
+            this.lblSystemName.Name = "lblSystemName";
+            this.lblSystemName.Size = new System.Drawing.Size(254, 60);
+            this.lblSystemName.TabIndex = 14;
+            this.lblSystemName.Text = "Order Processing and Stock Recording System";
+            this.lblSystemName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button2
+            // btnMeun
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(-2, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(46, 44);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnMeun.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMeun.FlatAppearance.BorderSize = 0;
+            this.btnMeun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMeun.ForeColor = System.Drawing.Color.White;
+            this.btnMeun.Image = ((System.Drawing.Image)(resources.GetObject("btnMeun.Image")));
+            this.btnMeun.Location = new System.Drawing.Point(-2, 0);
+            this.btnMeun.Name = "btnMeun";
+            this.btnMeun.Size = new System.Drawing.Size(46, 44);
+            this.btnMeun.TabIndex = 1;
+            this.btnMeun.UseVisualStyleBackColor = true;
+            this.btnMeun.Click += new System.EventHandler(this.button2_Click);
             // 
-            // pictureBox1
+            // companyLogo
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(105, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 58);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
+            this.companyLogo.Image = ((System.Drawing.Image)(resources.GetObject("companyLogo.Image")));
+            this.companyLogo.Location = new System.Drawing.Point(105, 10);
+            this.companyLogo.Name = "companyLogo";
+            this.companyLogo.Size = new System.Drawing.Size(72, 58);
+            this.companyLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.companyLogo.TabIndex = 13;
+            this.companyLogo.TabStop = false;
             // 
             // btnInventory
             // 
@@ -145,7 +146,7 @@ namespace ITP4915MProject
             this.btnInventory.ForeColor = System.Drawing.Color.White;
             this.btnInventory.Image = ((System.Drawing.Image)(resources.GetObject("btnInventory.Image")));
             this.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventory.Location = new System.Drawing.Point(3, 197);
+            this.btnInventory.Location = new System.Drawing.Point(3, 152);
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Size = new System.Drawing.Size(280, 44);
             this.btnInventory.TabIndex = 1;
@@ -162,7 +163,7 @@ namespace ITP4915MProject
             this.btnFrmDispatchNoteList.ForeColor = System.Drawing.Color.White;
             this.btnFrmDispatchNoteList.Image = ((System.Drawing.Image)(resources.GetObject("btnFrmDispatchNoteList.Image")));
             this.btnFrmDispatchNoteList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFrmDispatchNoteList.Location = new System.Drawing.Point(3, 347);
+            this.btnFrmDispatchNoteList.Location = new System.Drawing.Point(3, 302);
             this.btnFrmDispatchNoteList.Name = "btnFrmDispatchNoteList";
             this.btnFrmDispatchNoteList.Size = new System.Drawing.Size(280, 44);
             this.btnFrmDispatchNoteList.TabIndex = 1;
@@ -179,7 +180,7 @@ namespace ITP4915MProject
             this.btnItemManagment.ForeColor = System.Drawing.Color.White;
             this.btnItemManagment.Image = ((System.Drawing.Image)(resources.GetObject("btnItemManagment.Image")));
             this.btnItemManagment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnItemManagment.Location = new System.Drawing.Point(3, 247);
+            this.btnItemManagment.Location = new System.Drawing.Point(3, 202);
             this.btnItemManagment.Name = "btnItemManagment";
             this.btnItemManagment.Size = new System.Drawing.Size(280, 44);
             this.btnItemManagment.TabIndex = 1;
@@ -196,7 +197,7 @@ namespace ITP4915MProject
             this.btnFrmItem.ForeColor = System.Drawing.Color.White;
             this.btnFrmItem.Image = ((System.Drawing.Image)(resources.GetObject("btnFrmItem.Image")));
             this.btnFrmItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFrmItem.Location = new System.Drawing.Point(3, 397);
+            this.btnFrmItem.Location = new System.Drawing.Point(3, 352);
             this.btnFrmItem.Name = "btnFrmItem";
             this.btnFrmItem.Size = new System.Drawing.Size(280, 44);
             this.btnFrmItem.TabIndex = 1;
@@ -213,7 +214,7 @@ namespace ITP4915MProject
             this.btnWorks.ForeColor = System.Drawing.Color.White;
             this.btnWorks.Image = ((System.Drawing.Image)(resources.GetObject("btnWorks.Image")));
             this.btnWorks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnWorks.Location = new System.Drawing.Point(3, 297);
+            this.btnWorks.Location = new System.Drawing.Point(3, 252);
             this.btnWorks.Name = "btnWorks";
             this.btnWorks.Size = new System.Drawing.Size(280, 44);
             this.btnWorks.TabIndex = 1;
@@ -243,7 +244,7 @@ namespace ITP4915MProject
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(749, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 38);
+            this.label1.Size = new System.Drawing.Size(46, 19);
             this.label1.TabIndex = 14;
             this.label1.Text = "Role:";
             // 
@@ -254,7 +255,7 @@ namespace ITP4915MProject
             this.lblRole.ForeColor = System.Drawing.Color.White;
             this.lblRole.Location = new System.Drawing.Point(915, 47);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(119, 38);
+            this.lblRole.Size = new System.Drawing.Size(62, 19);
             this.lblRole.TabIndex = 14;
             this.lblRole.Text = "Admin";
             // 
@@ -265,7 +266,7 @@ namespace ITP4915MProject
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(412, 27);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(338, 66);
+            this.lblTitle.Size = new System.Drawing.Size(168, 33);
             this.lblTitle.TabIndex = 14;
             this.lblTitle.Text = "Home Page";
             // 
@@ -276,7 +277,7 @@ namespace ITP4915MProject
             this.lblUserName.ForeColor = System.Drawing.Color.White;
             this.lblUserName.Location = new System.Drawing.Point(904, 15);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(240, 38);
+            this.lblUserName.Size = new System.Drawing.Size(120, 19);
             this.lblUserName.TabIndex = 14;
             this.lblUserName.Text = "SaLaaR HuSyN";
             // 
@@ -287,36 +288,36 @@ namespace ITP4915MProject
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(749, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 38);
+            this.label3.Size = new System.Drawing.Size(63, 19);
             this.label3.TabIndex = 14;
             this.label3.Text = "Staff ID:";
             // 
-            // panel3
+            // topRemovableBar
             // 
-            this.panel3.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
-            this.panel3.Controls.Add(this.Lbl_Data);
-            this.panel3.Controls.Add(this.lblTime);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1200, 39);
-            this.panel3.TabIndex = 4;
-            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouse_Down);
-            this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouse_Move);
+            this.topRemovableBar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.topRemovableBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
+            this.topRemovableBar.Controls.Add(this.LblData);
+            this.topRemovableBar.Controls.Add(this.lblTime);
+            this.topRemovableBar.Controls.Add(this.btnCancel);
+            this.topRemovableBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topRemovableBar.ForeColor = System.Drawing.Color.White;
+            this.topRemovableBar.Location = new System.Drawing.Point(0, 0);
+            this.topRemovableBar.Name = "topRemovableBar";
+            this.topRemovableBar.Size = new System.Drawing.Size(1200, 39);
+            this.topRemovableBar.TabIndex = 4;
+            this.topRemovableBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouse_Down);
+            this.topRemovableBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouse_Move);
             // 
-            // Lbl_Data
+            // LblData
             // 
-            this.Lbl_Data.AutoSize = true;
-            this.Lbl_Data.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Data.ForeColor = System.Drawing.Color.White;
-            this.Lbl_Data.Location = new System.Drawing.Point(736, 9);
-            this.Lbl_Data.Name = "Lbl_Data";
-            this.Lbl_Data.Size = new System.Drawing.Size(266, 38);
-            this.Lbl_Data.TabIndex = 9;
-            this.Lbl_Data.Text = "WKD,MMD,YYYY";
+            this.LblData.AutoSize = true;
+            this.LblData.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblData.ForeColor = System.Drawing.Color.White;
+            this.LblData.Location = new System.Drawing.Point(736, 9);
+            this.LblData.Name = "LblData";
+            this.LblData.Size = new System.Drawing.Size(131, 19);
+            this.LblData.TabIndex = 9;
+            this.LblData.Text = "WKD,MMD,YYYY";
             // 
             // lblTime
             // 
@@ -325,24 +326,24 @@ namespace ITP4915MProject
             this.lblTime.ForeColor = System.Drawing.Color.White;
             this.lblTime.Location = new System.Drawing.Point(414, 9);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(295, 38);
+            this.lblTime.Size = new System.Drawing.Size(143, 19);
             this.lblTime.TabIndex = 8;
             this.lblTime.Text = "HH:MM:SS AM/PM";
             // 
-            // button1
+            // btnCancel
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1143, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(57, 39);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCancel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(1143, 0);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(57, 39);
+            this.btnCancel.TabIndex = 2;
+            this.btnCancel.Text = "X";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.button1_Click);
             // 
             // timerTime
             // 
@@ -399,12 +400,12 @@ namespace ITP4915MProject
             this.SalesContainer.Controls.Add(this.btn_SalesManagement);
             this.SalesContainer.Controls.Add(this.btn_OrderList);
             this.SalesContainer.Controls.Add(this.btn_CreateOrder);
-            this.SalesContainer.Location = new System.Drawing.Point(0, 149);
+            this.SalesContainer.Location = new System.Drawing.Point(228, 271);
             this.SalesContainer.Margin = new System.Windows.Forms.Padding(0);
-            this.SalesContainer.MaximumSize = new System.Drawing.Size(294, 180);
-            this.SalesContainer.MinimumSize = new System.Drawing.Size(294, 45);
+            this.SalesContainer.MaximumSize = new System.Drawing.Size(310, 180);
+            this.SalesContainer.MinimumSize = new System.Drawing.Size(310, 45);
             this.SalesContainer.Name = "SalesContainer";
-            this.SalesContainer.Size = new System.Drawing.Size(294, 45);
+            this.SalesContainer.Size = new System.Drawing.Size(310, 180);
             this.SalesContainer.TabIndex = 2;
             // 
             // btn_draft
@@ -429,7 +430,6 @@ namespace ITP4915MProject
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
             this.panelLeft.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelLeft.Controls.Add(this.TopLeftpannel);
-            this.panelLeft.Controls.Add(this.SalesContainer);
             this.panelLeft.Controls.Add(this.btnInventory);
             this.panelLeft.Controls.Add(this.btnItemManagment);
             this.panelLeft.Controls.Add(this.btnWorks);
@@ -453,7 +453,7 @@ namespace ITP4915MProject
             this.btn_Account.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Account.Image = ((System.Drawing.Image)(resources.GetObject("btn_Account.Image")));
             this.btn_Account.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Account.Location = new System.Drawing.Point(3, 447);
+            this.btn_Account.Location = new System.Drawing.Point(3, 402);
             this.btn_Account.Name = "btn_Account";
             this.btn_Account.Size = new System.Drawing.Size(280, 44);
             this.btn_Account.TabIndex = 7;
@@ -473,12 +473,14 @@ namespace ITP4915MProject
             // 
             // panMain
             // 
+            this.panMain.Controls.Add(this.SalesContainer);
             this.panMain.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panMain.ForeColor = System.Drawing.Color.White;
             this.panMain.Location = new System.Drawing.Point(298, 36);
             this.panMain.Name = "panMain";
             this.panMain.Size = new System.Drawing.Size(902, 745);
             this.panMain.TabIndex = 8;
+            this.panMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panMain_Paint);
             // 
             // FrmMainPage
             // 
@@ -489,7 +491,7 @@ namespace ITP4915MProject
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panelLeft);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.topRemovableBar);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -497,13 +499,14 @@ namespace ITP4915MProject
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainPage";
             this.TopLeftpannel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyLogo)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.topRemovableBar.ResumeLayout(false);
+            this.topRemovableBar.PerformLayout();
             this.SalesContainer.ResumeLayout(false);
             this.panelLeft.ResumeLayout(false);
+            this.panMain.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -517,21 +520,21 @@ namespace ITP4915MProject
         private System.Windows.Forms.Button btnInventory;
         private System.Windows.Forms.Button btn_SalesManagement;
         private System.Windows.Forms.Panel TopLeftpannel;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnMeun;
+        private System.Windows.Forms.Label lblSystemName;
+        private System.Windows.Forms.PictureBox companyLogo;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblRole;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel topRemovableBar;
         private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Timer timerTime;
         private System.Windows.Forms.Timer Slidetimer1;
-        private System.Windows.Forms.Label Lbl_Data;
+        private System.Windows.Forms.Label LblData;
         private System.Windows.Forms.Timer SalseTimer;
         private System.Windows.Forms.Button btn_OrderList;
         private System.Windows.Forms.Button btn_CreateOrder;

@@ -55,7 +55,7 @@ namespace ITP4915MProject
         private void timerTime_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToLongTimeString();
-            Lbl_Data.Text = DateTime.Now.ToLongDateString();
+            LblData.Text = DateTime.Now.ToLongDateString();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -168,6 +168,11 @@ namespace ITP4915MProject
         private void btnInventory_Click(object sender, EventArgs e)
         {
             loadform(new FrmStockRecord());
+        }
+
+        private void panMain_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
