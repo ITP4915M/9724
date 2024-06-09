@@ -48,10 +48,5 @@ namespace ITP4915MProject
             List<DISet> disets = dISetBLL.GetDISets(_orderid);
             dgvOrderItem.DataSource = disets;
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

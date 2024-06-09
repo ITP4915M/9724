@@ -21,10 +21,5 @@ namespace ITP4915MProject.Purchasing_Management
         {
 
         }
-
-        private void btn_close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }

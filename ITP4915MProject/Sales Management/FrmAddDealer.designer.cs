@@ -31,6 +31,7 @@ namespace ITP4915MProject.Account_Management
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddDealer));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDealerList = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -49,16 +50,13 @@ namespace ITP4915MProject.Account_Management
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_close = new System.Windows.Forms.Button();
             this.btnAddDealer = new System.Windows.Forms.Button();
-            this.btnDealerList = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.btn_close);
             this.panel1.Controls.Add(this.btnAddDealer);
             this.panel1.Controls.Add(this.btnDealerList);
             this.panel1.Controls.Add(this.label10);
@@ -85,6 +83,22 @@ namespace ITP4915MProject.Account_Management
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(866, 551);
             this.panel1.TabIndex = 0;
+            // 
+            // btnDealerList
+            // 
+            this.btnDealerList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
+            this.btnDealerList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDealerList.ForeColor = System.Drawing.Color.White;
+            this.btnDealerList.Image = ((System.Drawing.Image)(resources.GetObject("btnDealerList.Image")));
+            this.btnDealerList.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDealerList.Location = new System.Drawing.Point(73, 463);
+            this.btnDealerList.Name = "btnDealerList";
+            this.btnDealerList.Padding = new System.Windows.Forms.Padding(2);
+            this.btnDealerList.Size = new System.Drawing.Size(138, 46);
+            this.btnDealerList.TabIndex = 20;
+            this.btnDealerList.Text = "Dealar List";
+            this.btnDealerList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDealerList.UseVisualStyleBackColor = false;
             // 
             // label10
             // 
@@ -239,21 +253,10 @@ namespace ITP4915MProject.Account_Management
             this.label1.TabIndex = 0;
             this.label1.Text = "Dealer Name:";
             // 
-            // btn_close
-            // 
-            this.btn_close.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_close.FlatAppearance.BorderSize = 0;
-            this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_close.Image = ((System.Drawing.Image)(resources.GetObject("btn_close.Image")));
-            this.btn_close.Location = new System.Drawing.Point(824, 0);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(42, 30);
-            this.btn_close.TabIndex = 1;
-            this.btn_close.UseVisualStyleBackColor = true;
-            // 
             // btnAddDealer
             // 
             this.btnAddDealer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
+            this.btnAddDealer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddDealer.ForeColor = System.Drawing.Color.White;
             this.btnAddDealer.Image = ((System.Drawing.Image)(resources.GetObject("btnAddDealer.Image")));
             this.btnAddDealer.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -265,21 +268,6 @@ namespace ITP4915MProject.Account_Management
             this.btnAddDealer.Text = "Add Dealer";
             this.btnAddDealer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddDealer.UseVisualStyleBackColor = false;
-            // 
-            // btnDealerList
-            // 
-            this.btnDealerList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
-            this.btnDealerList.ForeColor = System.Drawing.Color.White;
-            this.btnDealerList.Image = ((System.Drawing.Image)(resources.GetObject("btnDealerList.Image")));
-            this.btnDealerList.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDealerList.Location = new System.Drawing.Point(73, 463);
-            this.btnDealerList.Name = "btnDealerList";
-            this.btnDealerList.Padding = new System.Windows.Forms.Padding(2);
-            this.btnDealerList.Size = new System.Drawing.Size(138, 46);
-            this.btnDealerList.TabIndex = 20;
-            this.btnDealerList.Text = "Dealar List";
-            this.btnDealerList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDealerList.UseVisualStyleBackColor = false;
             // 
             // FrmAddDealer
             // 
@@ -324,6 +312,5 @@ namespace ITP4915MProject.Account_Management
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnAddDealer;
-        private System.Windows.Forms.Button btn_close;
     }
 }

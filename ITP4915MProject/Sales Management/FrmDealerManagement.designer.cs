@@ -46,7 +46,6 @@ namespace ITP4915MProject.Account_Management
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btn_close = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -56,7 +55,6 @@ namespace ITP4915MProject.Account_Management
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.btn_close);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -69,9 +67,9 @@ namespace ITP4915MProject.Account_Management
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Location = new System.Drawing.Point(26, 243);
+            this.groupBox2.Location = new System.Drawing.Point(26, 346);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(834, 459);
+            this.groupBox2.Size = new System.Drawing.Size(834, 356);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dealer List";
@@ -82,7 +80,7 @@ namespace ITP4915MProject.Account_Management
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 23);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(828, 433);
+            this.dataGridView1.Size = new System.Drawing.Size(828, 330);
             this.dataGridView1.TabIndex = 0;
             // 
             // groupBox1
@@ -99,9 +97,9 @@ namespace ITP4915MProject.Account_Management
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(26, 20);
+            this.groupBox1.Location = new System.Drawing.Point(26, 14);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(834, 217);
+            this.groupBox1.Size = new System.Drawing.Size(834, 316);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filter";
@@ -110,7 +108,7 @@ namespace ITP4915MProject.Account_Management
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
             this.button4.ForeColor = System.Drawing.Color.Lime;
-            this.button4.Location = new System.Drawing.Point(652, 160);
+            this.button4.Location = new System.Drawing.Point(652, 217);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(2);
             this.button4.Size = new System.Drawing.Size(145, 39);
@@ -122,7 +120,7 @@ namespace ITP4915MProject.Account_Management
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
             this.button3.ForeColor = System.Drawing.Color.Gold;
-            this.button3.Location = new System.Drawing.Point(461, 160);
+            this.button3.Location = new System.Drawing.Point(461, 217);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(2);
             this.button3.Size = new System.Drawing.Size(145, 39);
@@ -136,7 +134,7 @@ namespace ITP4915MProject.Account_Management
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(215, 160);
+            this.button2.Location = new System.Drawing.Point(232, 193);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(2);
             this.button2.Size = new System.Drawing.Size(94, 39);
@@ -196,7 +194,7 @@ namespace ITP4915MProject.Account_Management
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(71, 160);
+            this.button1.Location = new System.Drawing.Point(88, 193);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(2);
             this.button1.Size = new System.Drawing.Size(104, 39);
@@ -227,18 +225,6 @@ namespace ITP4915MProject.Account_Management
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 27);
             this.textBox1.TabIndex = 0;
-            // 
-            // btn_close
-            // 
-            this.btn_close.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_close.FlatAppearance.BorderSize = 0;
-            this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_close.Image = ((System.Drawing.Image)(resources.GetObject("btn_close.Image")));
-            this.btn_close.Location = new System.Drawing.Point(840, 0);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(42, 30);
-            this.btn_close.TabIndex = 12;
-            this.btn_close.UseVisualStyleBackColor = true;
             // 
             // FrmDealerManagement
             // 
@@ -281,6 +267,5 @@ namespace ITP4915MProject.Account_Management
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btn_close;
     }
 }

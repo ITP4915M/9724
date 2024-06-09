@@ -43,6 +43,31 @@ namespace ITP4915MProject
             BindCbx();
             dgvItemInfo.DataSource = itemInfoBll.GetItems();
 
+            DataGridViewButtonColumn btnSetStockLevel = new DataGridViewButtonColumn();
+            btnSetStockLevel.HeaderText = "Set Stock Level";
+            btnSetStockLevel.Text = "Edit";
+            btnSetStockLevel.Name = "SetStockLevel";
+            btnSetStockLevel.UseColumnTextForButtonValue = true; 
+
+            dgvItemInfo.Columns.Add(btnSetStockLevel); 
+            dgvItemInfo.CellContentClick += new DataGridViewCellEventHandler(dgvItemList_CellContentClick);
+
+        }
+
+        private void dgvItemList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // make sure enter the button
+            if (dgvItemInfo.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            {
+                // get the itemid
+                string itemId = dgvItemInfo.Rows[e.RowIndex].Cells["ItemID"].Value.ToString(); 
+
+                //opent stock level and send the itemid 
+                FrmStockLevel frmSetStockLevel = new FrmStockLevel(itemId);
+                frmSetStockLevel.ShowDialog();
+
+
+            }
         }
 
         private void BindCbx()

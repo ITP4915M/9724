@@ -113,21 +113,20 @@ namespace ITP4915MProject
             this.grpStaffInfo.TabIndex = 19;
             this.grpStaffInfo.TabStop = false;
             this.grpStaffInfo.Text = "Staff Information";
-            this.grpStaffInfo.Enter += new System.EventHandler(this.grpStaffInfo_Enter);
             // 
             // cbxPosition
             // 
             this.cbxPosition.FormattingEnabled = true;
             this.cbxPosition.Location = new System.Drawing.Point(550, 208);
             this.cbxPosition.Name = "cbxPosition";
-            this.cbxPosition.Size = new System.Drawing.Size(203, 31);
+            this.cbxPosition.Size = new System.Drawing.Size(203, 46);
             this.cbxPosition.TabIndex = 20;
             // 
             // txtConfirmPassword
             // 
             this.txtConfirmPassword.Location = new System.Drawing.Point(171, 317);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.Size = new System.Drawing.Size(203, 32);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(203, 47);
             this.txtConfirmPassword.TabIndex = 17;
             // 
             // cbxDepartment
@@ -135,7 +134,7 @@ namespace ITP4915MProject
             this.cbxDepartment.FormattingEnabled = true;
             this.cbxDepartment.Location = new System.Drawing.Point(171, 149);
             this.cbxDepartment.Name = "cbxDepartment";
-            this.cbxDepartment.Size = new System.Drawing.Size(203, 31);
+            this.cbxDepartment.Size = new System.Drawing.Size(203, 46);
             this.cbxDepartment.TabIndex = 19;
             // 
             // label1
@@ -144,7 +143,7 @@ namespace ITP4915MProject
             this.label1.Location = new System.Drawing.Point(13, 325);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 23);
+            this.label1.Size = new System.Drawing.Size(307, 38);
             this.label1.TabIndex = 16;
             this.label1.Text = "Re-Enter Password:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -155,7 +154,7 @@ namespace ITP4915MProject
             this.lblPosition.Location = new System.Drawing.Point(456, 211);
             this.lblPosition.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(90, 23);
+            this.lblPosition.Size = new System.Drawing.Size(143, 38);
             this.lblPosition.TabIndex = 17;
             this.lblPosition.Text = "Position:";
             // 
@@ -163,21 +162,21 @@ namespace ITP4915MProject
             // 
             this.nudAge.Location = new System.Drawing.Point(550, 38);
             this.nudAge.Name = "nudAge";
-            this.nudAge.Size = new System.Drawing.Size(54, 32);
+            this.nudAge.Size = new System.Drawing.Size(54, 47);
             this.nudAge.TabIndex = 16;
             // 
             // txtStaffID
             // 
             this.txtStaffID.Location = new System.Drawing.Point(171, 37);
             this.txtStaffID.Name = "txtStaffID";
-            this.txtStaffID.Size = new System.Drawing.Size(203, 32);
+            this.txtStaffID.Size = new System.Drawing.Size(203, 47);
             this.txtStaffID.TabIndex = 15;
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(171, 261);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(203, 32);
+            this.txtPassword.Size = new System.Drawing.Size(203, 47);
             this.txtPassword.TabIndex = 10;
             // 
             // lblStaffID
@@ -186,7 +185,7 @@ namespace ITP4915MProject
             this.lblStaffID.Location = new System.Drawing.Point(101, 40);
             this.lblStaffID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStaffID.Name = "lblStaffID";
-            this.lblStaffID.Size = new System.Drawing.Size(83, 23);
+            this.lblStaffID.Size = new System.Drawing.Size(132, 38);
             this.lblStaffID.TabIndex = 14;
             this.lblStaffID.Text = "Staff ID:";
             this.lblStaffID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -197,7 +196,7 @@ namespace ITP4915MProject
             this.lblPassword.Location = new System.Drawing.Point(80, 268);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(106, 23);
+            this.lblPassword.Size = new System.Drawing.Size(170, 38);
             this.lblPassword.TabIndex = 3;
             this.lblPassword.Text = "Password:";
             this.lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -208,7 +207,7 @@ namespace ITP4915MProject
             this.lblName.Location = new System.Drawing.Point(102, 97);
             this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(76, 23);
+            this.lblName.Size = new System.Drawing.Size(121, 38);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name:";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -219,7 +218,7 @@ namespace ITP4915MProject
             this.lblDepartment.Location = new System.Drawing.Point(53, 154);
             this.lblDepartment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDepartment.Name = "lblDepartment";
-            this.lblDepartment.Size = new System.Drawing.Size(138, 23);
+            this.lblDepartment.Size = new System.Drawing.Size(220, 38);
             this.lblDepartment.TabIndex = 1;
             this.lblDepartment.Text = "Departmemt:";
             this.lblDepartment.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -228,7 +227,7 @@ namespace ITP4915MProject
             // 
             this.txtEmail.Location = new System.Drawing.Point(171, 205);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(203, 32);
+            this.txtEmail.Size = new System.Drawing.Size(203, 47);
             this.txtEmail.TabIndex = 13;
             // 
             // lblCNID
@@ -237,7 +236,7 @@ namespace ITP4915MProject
             this.lblCNID.Location = new System.Drawing.Point(474, 97);
             this.lblCNID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCNID.Name = "lblCNID";
-            this.lblCNID.Size = new System.Drawing.Size(67, 23);
+            this.lblCNID.Size = new System.Drawing.Size(106, 38);
             this.lblCNID.TabIndex = 4;
             this.lblCNID.Text = "CNID:";
             // 
@@ -245,7 +244,7 @@ namespace ITP4915MProject
             // 
             this.txtPhoneNo.Location = new System.Drawing.Point(550, 149);
             this.txtPhoneNo.Name = "txtPhoneNo";
-            this.txtPhoneNo.Size = new System.Drawing.Size(203, 32);
+            this.txtPhoneNo.Size = new System.Drawing.Size(203, 47);
             this.txtPhoneNo.TabIndex = 12;
             // 
             // lblEmail
@@ -254,7 +253,7 @@ namespace ITP4915MProject
             this.lblEmail.Location = new System.Drawing.Point(108, 211);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(68, 23);
+            this.lblEmail.Size = new System.Drawing.Size(110, 38);
             this.lblEmail.TabIndex = 6;
             this.lblEmail.Text = "Email:";
             this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -265,7 +264,7 @@ namespace ITP4915MProject
             this.lblPhoneNo.Location = new System.Drawing.Point(396, 154);
             this.lblPhoneNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPhoneNo.Name = "lblPhoneNo";
-            this.lblPhoneNo.Size = new System.Drawing.Size(161, 23);
+            this.lblPhoneNo.Size = new System.Drawing.Size(255, 38);
             this.lblPhoneNo.TabIndex = 5;
             this.lblPhoneNo.Text = "Phone Number:";
             // 
@@ -273,14 +272,14 @@ namespace ITP4915MProject
             // 
             this.txtCNID.Location = new System.Drawing.Point(550, 93);
             this.txtCNID.Name = "txtCNID";
-            this.txtCNID.Size = new System.Drawing.Size(203, 32);
+            this.txtCNID.Size = new System.Drawing.Size(203, 47);
             this.txtCNID.TabIndex = 11;
             // 
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(171, 93);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(203, 32);
+            this.txtName.Size = new System.Drawing.Size(203, 47);
             this.txtName.TabIndex = 7;
             // 
             // lblAge
@@ -289,7 +288,7 @@ namespace ITP4915MProject
             this.lblAge.Location = new System.Drawing.Point(480, 40);
             this.lblAge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(57, 23);
+            this.lblAge.Size = new System.Drawing.Size(91, 38);
             this.lblAge.TabIndex = 2;
             this.lblAge.Text = "Age:";
             // 

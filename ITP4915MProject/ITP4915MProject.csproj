@@ -54,10 +54,6 @@
     <Reference Include="MySql.Data, Version=8.4.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.4.0\lib\net462\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Web, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 6.9.8\Assemblies\v4.5\MySql.Web.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -120,6 +116,18 @@
     <Compile Include="Account Management\FrmStaffManagment.designer.cs">
       <DependentUpon>FrmStaffManagment.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMainPage.designer.cs">
+      <DependentUpon>FrmMainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory Management\FrmStockLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory Management\FrmStockLevel.Designer.cs">
+      <DependentUpon>FrmStockLevel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sales Management\FrmAddDealer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,12 +188,6 @@
     <Compile Include="Inventory Management\FrmItemList.designer.cs">
       <DependentUpon>FrmItemList.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMainPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmMainPage.designer.cs">
-      <DependentUpon>FrmMainPage.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login\FrmResetPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,12 +205,6 @@
     </Compile>
     <Compile Include="Inventory Management\FrmDispatchNoteDetail.Designer.cs">
       <DependentUpon>FrmDispatchNoteDetail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Inventory Management\FrmCreateItem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inventory Management\FrmCreateItem.Designer.cs">
-      <DependentUpon>FrmCreateItem.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory Management\FrmDispatchNoteList.cs">
       <SubType>Form</SubType>
@@ -257,6 +253,12 @@
     <EmbeddedResource Include="Account Management\FrmStaffManagment.resx">
       <DependentUpon>FrmStaffManagment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMainPage.resx">
+      <DependentUpon>FrmMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory Management\FrmStockLevel.resx">
+      <DependentUpon>FrmStockLevel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sales Management\FrmAddDealer.resx">
       <DependentUpon>FrmAddDealer.cs</DependentUpon>
     </EmbeddedResource>
@@ -287,17 +289,11 @@
     <EmbeddedResource Include="Inventory Management\FrmItemList.resx">
       <DependentUpon>FrmItemList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMainPage.resx">
-      <DependentUpon>FrmMainPage.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login\FrmResetPassword.resx">
       <DependentUpon>FrmResetPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\FrmForgetPassword.resx">
       <DependentUpon>FrmForgetPassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Inventory Management\FrmCreateItem.resx">
-      <DependentUpon>FrmCreateItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory Management\FrmDispatchNoteDetail.resx">
       <DependentUpon>FrmDispatchNoteDetail.cs</DependentUpon>
@@ -325,7 +321,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
@@ -358,50 +353,6 @@
       <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\image-upload_24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\plus_24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\log-out_24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\diskette_24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\delete_24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\reset_24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\search_24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add-user_24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\printer_24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\delete_241.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\search_241.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\reset_241.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\reset_242.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\search_242.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\checked_24.png" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

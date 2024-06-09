@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 using Common;
-
+using Models;
 
 namespace ITP4915MProject
 {
@@ -43,8 +43,9 @@ namespace ITP4915MProject
             else if (staffBLL.checkValidation(staffID, password))                         //調用staffBBL的checkValidation方法 驗證登錄信息
             {
                 MessageBox.Show("Login Successful!");
+                GlobalVariables.StaffID = txtStaffID.Text;
                 this.Hide();                                                                             // 隱藏當前窗口
-                FrmMainPage mainForm = new FrmMainPage();
+                FrmMainPage mainForm = new FrmMainPage(GlobalVariables.StaffID);
                 mainForm.Closed += (s, args) => this.Close();   // 當主頁面關閉時，登錄頁面也關閉
                 mainForm.Show();
             }

@@ -14,6 +14,7 @@ namespace DAL
     {
         //創建MysqlHelper 的對象 ，CRUD 基本訪問數據方法
         DAL.MysqlHelper msh = new DAL.MysqlHelper(ConfigurationManager.ConnectionStrings["connstr"].ToString());
+        IDSelfIncreasementHelper idIncrease = new IDSelfIncreasementHelper();
 
         /// <summary>
         /// 添加員工數據,返回受影響行數
@@ -36,7 +37,14 @@ namespace DAL
 
 
         }
-
+        private string GetNextCharId()
+        {
+            string lastId = idIncrease.QueryDatabaseForLastCharId();
+            long numericPart = long.Parse(lastId);
+            numericPart++;
+            string newId = numericPart.ToString();
+            return newId;
+        }
 
 
         /// <summary>
@@ -95,7 +103,7 @@ namespace DAL
         /// </summary>
         /// <param name="StaffID"></param>
         /// <returns></returns>
-        public List <Staff> SelectStaffByStaffID(int StaffID)
+        public List <Staff> SelectStaffByStaffID(string StaffID)
         {
             List<Staff> st = new List<Staff>();
             DataTable dt = msh.ExecuteDataTable(@"SELECT * FROM staff WHERE StaffID = @StaffID", new MySqlParameter("@StaffID", StaffID));

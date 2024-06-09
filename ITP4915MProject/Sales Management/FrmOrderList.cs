@@ -67,15 +67,16 @@ namespace ITP4915MProject
             dgvOrderList.Columns["TotalItem"].Visible = false;
             dgvOrderList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             DataGridViewButtonColumn btnColumn = new DataGridViewButtonColumn();
-            btnColumn.Name = "btnColumnDetails";
-            btnColumn.HeaderText = "Action";
+            btnColumn.Name = "View Detail";
+            btnColumn.HeaderText = "View Detail";
             btnColumn.Text = "View Detail";
             btnColumn.UseColumnTextForButtonValue = true;
 
             // add the buttton to the datagrid view
             dgvOrderList.Columns.Add(btnColumn);
 
-
+            //add a event to 
+            dgvOrderList.CellClick += new DataGridViewCellEventHandler(dgvOrderList_CellClick);
 
             //binding combo box status
             string[] status = new string[] { "--Select Order Status--", "Pending", "Processing", "Shipped", "Delivered", "Cancelled", "Draft" };
@@ -97,6 +98,20 @@ namespace ITP4915MProject
                       cbxStaffID.ValueMember = "StaffID";*/
 
 
+        }
+
+        private void dgvOrderList_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.ColumnIndex == dgvOrderList.Columns["View Detail"].Index && e.RowIndex >= 0)
+            {
+                // collect the orderid in specific row
+                string orderId = dgvOrderList.Rows[e.RowIndex].Cells["OrderID"].Value.ToString();
+
+                // show the diset detail form
+                FrmOrderDetail frmOrderDetaill = new FrmOrderDetail(orderId);
+                frmOrderDetaill.ShowDialog();
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -131,6 +146,11 @@ namespace ITP4915MProject
             cbxStatus.SelectedIndex = 0;
             dgvOrderList.DataSource = orderBll.getAllOrders();
         }
+
+
+
+
+
 
 
 

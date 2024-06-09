@@ -97,16 +97,16 @@
     <Compile Include="DealerOrder.cs" />
     <Compile Include="Department.cs" />
     <Compile Include="DISet.cs" />
-    <Compile Include="GoodReceiveNote.cs" />
-    <Compile Include="GRNItem.cs" />
+    <Compile Include="DISetItem.cs" />
+    <Compile Include="GlobalVariables.cs" />
     <Compile Include="ItemInfo.cs" />
     <Compile Include="Order.cs" />
-    <Compile Include="paymentGateway.cs" />
     <Compile Include="Position.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Staff.cs" />
     <Compile Include="StaffDepartment.cs" />
-    <Compile Include="Supplier.cs" />
+    <Compile Include="StockLevel.cs" />
+    <Compile Include="StockRecord.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

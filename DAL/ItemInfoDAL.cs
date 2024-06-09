@@ -62,9 +62,9 @@ namespace DAL
         public void UpdateItem(ItemInfo  itemInfo)
         {
             string sql = "UPDATE order SET  " +
-    "Picture = @Picture, ItemID=@ItemID,ItemName = @ItemName,Quantity=@Quantity," +
-    "Category=@Category,Weight=@Weight,Descrption=@Descrption, Price=@Price,StockLevel=@StockLevel WHERE ItemID = @ItemID";
-            int row = msh.ExecuteNonQuery(sql,
+                "Picture = @Picture, ItemID=@ItemID,ItemName = @ItemName,Quantity=@Quantity," +
+                "Category=@Category,Weight=@Weight,Descrption=@Descrption, Price=@Price,StockLevel=@StockLevel WHERE ItemID = @ItemID";
+               int row = msh.ExecuteNonQuery(sql,
                new MySqlParameter("@Picture", itemInfo.Picture),
                new MySqlParameter("@ItemID", itemInfo.ItemID),
                new MySqlParameter("@ItemName", itemInfo.ItemName),

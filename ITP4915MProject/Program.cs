@@ -16,7 +16,7 @@ namespace ITP4915MProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmEditOrder());
+            Application.Run(new FrmLogin());
         }
     }
 }

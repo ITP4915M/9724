@@ -41,7 +41,6 @@ namespace ITP4915MProject.Purchasing_Management
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtSupplier = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_close = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -51,7 +50,6 @@ namespace ITP4915MProject.Purchasing_Management
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.btn_close);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
             this.panel1.Location = new System.Drawing.Point(12, 12);
@@ -84,7 +82,6 @@ namespace ITP4915MProject.Purchasing_Management
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.Location = new System.Drawing.Point(624, 613);
             this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(2);
             this.button2.Size = new System.Drawing.Size(161, 39);
             this.button2.TabIndex = 10;
             this.button2.Text = "Go To Payment";
@@ -99,7 +96,6 @@ namespace ITP4915MProject.Purchasing_Management
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.Location = new System.Drawing.Point(185, 613);
             this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(2);
             this.button1.Size = new System.Drawing.Size(171, 39);
             this.button1.TabIndex = 9;
             this.button1.Text = "Add Item to GRN";
@@ -114,7 +110,6 @@ namespace ITP4915MProject.Purchasing_Management
             this.btnGRN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGRN.Location = new System.Drawing.Point(30, 613);
             this.btnGRN.Name = "btnGRN";
-            this.btnGRN.Padding = new System.Windows.Forms.Padding(2);
             this.btnGRN.Size = new System.Drawing.Size(99, 39);
             this.btnGRN.TabIndex = 8;
             this.btnGRN.Text = "GRN";
@@ -173,24 +168,12 @@ namespace ITP4915MProject.Purchasing_Management
             this.label1.TabIndex = 0;
             this.label1.Text = "Supplier Name:";
             // 
-            // btn_close
-            // 
-            this.btn_close.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_close.FlatAppearance.BorderSize = 0;
-            this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_close.Image = ((System.Drawing.Image)(resources.GetObject("btn_close.Image")));
-            this.btn_close.Location = new System.Drawing.Point(836, 0);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(42, 30);
-            this.btn_close.TabIndex = 11;
-            this.btn_close.UseVisualStyleBackColor = true;
-            // 
             // FrmGRNInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(902, 745);
+            this.ClientSize = new System.Drawing.Size(1329, 1118);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -219,6 +202,5 @@ namespace ITP4915MProject.Purchasing_Management
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtSupplier;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_close;
     }
 }

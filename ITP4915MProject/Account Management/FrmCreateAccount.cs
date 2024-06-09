@@ -165,6 +165,7 @@ namespace ITP4915MProject
                 MessageBox.Show("Create Staff Account Successfu!l");
 
                 _delBindDgv();
+                Close();
 
             }
             else
@@ -174,11 +175,6 @@ namespace ITP4915MProject
 
 
 
-
-        }
-
-        private void grpStaffInfo_Enter(object sender, EventArgs e)
-        {
 
         }
     }

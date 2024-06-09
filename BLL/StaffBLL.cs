@@ -55,5 +55,10 @@ namespace BLL
             return staffDal.SelectAllStaffs();
         }
 
+        public List<Staff> GetStaffByID(string staffId)
+        {
+            return staffDal.SelectStaffByStaffID(staffId);
+        }
+
     }
 }

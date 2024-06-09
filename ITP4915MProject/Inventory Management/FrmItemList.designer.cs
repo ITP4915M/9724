@@ -30,6 +30,8 @@ namespace ITP4915MProject
         private void InitializeComponent()
         {
             this.grpFilter = new System.Windows.Forms.GroupBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.cbxCatagory = new System.Windows.Forms.ComboBox();
             this.lblCatagory = new System.Windows.Forms.Label();
             this.txtItemName = new System.Windows.Forms.TextBox();
@@ -39,8 +41,6 @@ namespace ITP4915MProject
             this.grpItemList = new System.Windows.Forms.GroupBox();
             this.dgvItemInfo = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
             this.grpFilter.SuspendLayout();
             this.grpItemList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItemInfo)).BeginInit();
@@ -64,6 +64,30 @@ namespace ITP4915MProject
             this.grpFilter.TabIndex = 0;
             this.grpFilter.TabStop = false;
             this.grpFilter.Text = "Filter";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Location = new System.Drawing.Point(635, 108);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(124, 38);
+            this.btnSearch.TabIndex = 7;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
+            this.btnReset.ForeColor = System.Drawing.Color.White;
+            this.btnReset.Location = new System.Drawing.Point(482, 108);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(124, 38);
+            this.btnReset.TabIndex = 6;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // cbxCatagory
             // 
@@ -128,11 +152,11 @@ namespace ITP4915MProject
             // dgvItemInfo
             // 
             this.dgvItemInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvItemInfo.Location = new System.Drawing.Point(6, 23);
+            this.dgvItemInfo.Location = new System.Drawing.Point(3, 23);
             this.dgvItemInfo.Name = "dgvItemInfo";
             this.dgvItemInfo.RowHeadersWidth = 82;
             this.dgvItemInfo.RowTemplate.Height = 37;
-            this.dgvItemInfo.Size = new System.Drawing.Size(863, 516);
+            this.dgvItemInfo.Size = new System.Drawing.Size(872, 522);
             this.dgvItemInfo.TabIndex = 0;
             // 
             // panel1
@@ -143,38 +167,6 @@ namespace ITP4915MProject
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1256, 756);
             this.panel1.TabIndex = 2;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Image = global::ITP4915MProject.Properties.Resources.search_241;
-            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSearch.Location = new System.Drawing.Point(635, 108);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Padding = new System.Windows.Forms.Padding(2);
-            this.btnSearch.Size = new System.Drawing.Size(124, 38);
-            this.btnSearch.TabIndex = 7;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // btnReset
-            // 
-            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
-            this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.Image = global::ITP4915MProject.Properties.Resources.reset_241;
-            this.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnReset.Location = new System.Drawing.Point(482, 108);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Padding = new System.Windows.Forms.Padding(2);
-            this.btnReset.Size = new System.Drawing.Size(124, 38);
-            this.btnReset.TabIndex = 6;
-            this.btnReset.Text = "Reset";
-            this.btnReset.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReset.UseVisualStyleBackColor = false;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // FrmItemList
             // 

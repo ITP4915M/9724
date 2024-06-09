@@ -12,7 +12,6 @@ namespace Models
         public string DealerName { get; set; }
         public DateTime OrderDate { get; set; }
         public string Status { get; set; }
-
         public int TotalItem { get; set; }
 
     }

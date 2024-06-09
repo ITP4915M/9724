@@ -37,11 +37,10 @@ namespace ITP4915MProject
             this.grpItem = new System.Windows.Forms.GroupBox();
             this.dgvOrderItem = new System.Windows.Forms.DataGridView();
             this.grpInformation = new System.Windows.Forms.GroupBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.cbxDealer = new System.Windows.Forms.ComboBox();
             this.lblDealer = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtRemark = new System.Windows.Forms.TextBox();
-            this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_SaveToDraft = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.grpItem.SuspendLayout();
@@ -60,7 +59,6 @@ namespace ITP4915MProject
             this.panel1.Controls.Add(this.btnSelectItem);
             this.panel1.Controls.Add(this.grpItem);
             this.panel1.Controls.Add(this.grpInformation);
-            this.panel1.Controls.Add(this.btn_Cancel);
             this.panel1.Controls.Add(this.btn_SaveToDraft);
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(18, 10);
@@ -78,7 +76,7 @@ namespace ITP4915MProject
             this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirm.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnConfirm.Location = new System.Drawing.Point(504, 648);
+            this.btnConfirm.Location = new System.Drawing.Point(656, 643);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(163, 42);
             this.btnConfirm.TabIndex = 17;
@@ -137,21 +135,21 @@ namespace ITP4915MProject
             // 
             this.dgvOrderItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrderItem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvOrderItem.Location = new System.Drawing.Point(3, 23);
+            this.dgvOrderItem.Location = new System.Drawing.Point(3, 43);
             this.dgvOrderItem.Name = "dgvOrderItem";
             this.dgvOrderItem.RowHeadersWidth = 82;
             this.dgvOrderItem.RowTemplate.Height = 37;
-            this.dgvOrderItem.Size = new System.Drawing.Size(808, 434);
+            this.dgvOrderItem.Size = new System.Drawing.Size(808, 414);
             this.dgvOrderItem.TabIndex = 0;
             // 
             // grpInformation
             // 
             this.grpInformation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpInformation.Controls.Add(this.richTextBox1);
             this.grpInformation.Controls.Add(this.cbxDealer);
             this.grpInformation.Controls.Add(this.lblDealer);
             this.grpInformation.Controls.Add(this.label5);
-            this.grpInformation.Controls.Add(this.txtRemark);
             this.grpInformation.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpInformation.Location = new System.Drawing.Point(8, 8);
             this.grpInformation.Name = "grpInformation";
@@ -160,12 +158,20 @@ namespace ITP4915MProject
             this.grpInformation.TabStop = false;
             this.grpInformation.Text = "Basic Information";
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(546, 38);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(239, 87);
+            this.richTextBox1.TabIndex = 10;
+            this.richTextBox1.Text = "";
+            // 
             // cbxDealer
             // 
             this.cbxDealer.FormattingEnabled = true;
             this.cbxDealer.Location = new System.Drawing.Point(115, 33);
             this.cbxDealer.Name = "cbxDealer";
-            this.cbxDealer.Size = new System.Drawing.Size(243, 27);
+            this.cbxDealer.Size = new System.Drawing.Size(243, 46);
             this.cbxDealer.TabIndex = 9;
             // 
             // lblDealer
@@ -178,7 +184,7 @@ namespace ITP4915MProject
             this.lblDealer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
             this.lblDealer.Location = new System.Drawing.Point(21, 36);
             this.lblDealer.Name = "lblDealer";
-            this.lblDealer.Size = new System.Drawing.Size(64, 19);
+            this.lblDealer.Size = new System.Drawing.Size(127, 38);
             this.lblDealer.TabIndex = 6;
             this.lblDealer.Text = "Dealer:";
             // 
@@ -187,35 +193,11 @@ namespace ITP4915MProject
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
-            this.label5.Location = new System.Drawing.Point(21, 85);
+            this.label5.Location = new System.Drawing.Point(395, 36);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 19);
+            this.label5.Size = new System.Drawing.Size(145, 38);
             this.label5.TabIndex = 8;
             this.label5.Text = "Remark:";
-            // 
-            // txtRemark
-            // 
-            this.txtRemark.Location = new System.Drawing.Point(115, 82);
-            this.txtRemark.Name = "txtRemark";
-            this.txtRemark.Size = new System.Drawing.Size(192, 27);
-            this.txtRemark.TabIndex = 7;
-            // 
-            // btn_Cancel
-            // 
-            this.btn_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_Cancel.BackColor = System.Drawing.Color.DarkRed;
-            this.btn_Cancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
-            this.btn_Cancel.FlatAppearance.BorderSize = 3;
-            this.btn_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Cancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancel.ForeColor = System.Drawing.Color.White;
-            this.btn_Cancel.Location = new System.Drawing.Point(704, 648);
-            this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Padding = new System.Windows.Forms.Padding(3);
-            this.btn_Cancel.Size = new System.Drawing.Size(88, 42);
-            this.btn_Cancel.TabIndex = 14;
-            this.btn_Cancel.Text = "Cancel";
-            this.btn_Cancel.UseVisualStyleBackColor = false;
             // 
             // btn_SaveToDraft
             // 
@@ -225,12 +207,13 @@ namespace ITP4915MProject
             this.btn_SaveToDraft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SaveToDraft.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_SaveToDraft.ForeColor = System.Drawing.Color.SandyBrown;
-            this.btn_SaveToDraft.Location = new System.Drawing.Point(353, 648);
+            this.btn_SaveToDraft.Location = new System.Drawing.Point(455, 643);
             this.btn_SaveToDraft.Name = "btn_SaveToDraft";
             this.btn_SaveToDraft.Size = new System.Drawing.Size(120, 42);
             this.btn_SaveToDraft.TabIndex = 13;
             this.btn_SaveToDraft.Text = "Save to Draft";
             this.btn_SaveToDraft.UseVisualStyleBackColor = false;
+            this.btn_SaveToDraft.Click += new System.EventHandler(this.btn_SaveToDraft_Click_1);
             // 
             // FrmCreateOrder
             // 
@@ -261,15 +244,14 @@ namespace ITP4915MProject
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSelectItem;
         private System.Windows.Forms.Button btn_Remove;
-        private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.Button btn_SaveToDraft;
         private System.Windows.Forms.GroupBox grpInformation;
         private System.Windows.Forms.GroupBox grpItem;
         private System.Windows.Forms.ComboBox cbxDealer;
         private System.Windows.Forms.Label lblDealer;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtRemark;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.DataGridView dgvOrderItem;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

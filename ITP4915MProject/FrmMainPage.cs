@@ -12,21 +12,23 @@ namespace ITP4915MProject
 {
     public partial class FrmMainPage : Form
     {
+        private string staffID;
         public Point mouseLocation;
         private Point mouseOffset;
         int panelWidth;
         bool isCollapsed;
         bool orderCollasped;
-        public FrmMainPage()
+        public FrmMainPage(string staffID)
         {
             InitializeComponent();
             timerTime.Start();
             panelWidth = panelLeft.Width;
             isCollapsed = false;
-            
+            this.staffID = staffID;
+
         }
 
-        private void timer1_Tick(object sender, EventArgs e) //click Meun icon can collapsed
+        private void timer1_Tick(object sender, EventArgs e)
         {
             if (isCollapsed)
             {
@@ -52,8 +54,8 @@ namespace ITP4915MProject
 
         private void timerTime_Tick(object sender, EventArgs e)
         {
-            lblTime.Text = DateTime.Now.ToLongTimeString(); //display time
-            Lbl_Data.Text = DateTime.Now.ToLongDateString();//display data
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+            Lbl_Data.Text = DateTime.Now.ToLongDateString();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -74,8 +76,10 @@ namespace ITP4915MProject
         }
 
 
-        public void loadform(object Form) {
-            if (this.panMain.Controls.Count > 0) {
+        public void loadform(object Form)
+        {
+            if (this.panMain.Controls.Count > 0)
+            {
                 this.panMain.Controls.RemoveAt(0);
             }
             Form f = Form as Form;
@@ -84,11 +88,11 @@ namespace ITP4915MProject
             this.panMain.Controls.Add(f);
             this.panMain.Tag = f;
             f.Show();
-        
-        
+
+
         }
 
-     
+
 
         private void HomeTimer_Tick(object sender, EventArgs e)
         {
@@ -99,15 +103,15 @@ namespace ITP4915MProject
         {
             if (orderCollasped)
             {
-                containerSalesContainerSales.Height += 180;
-                if (containerSalesContainerSales.Height == containerSalesContainerSales.MaximumSize.Height) ;
+                SalesContainer.Height += 180;
+                if (SalesContainer.Height == SalesContainer.MaximumSize.Height) ;
                 orderCollasped = false;
                 SalseTimer.Stop();
             }
             else
             {
-                containerSalesContainerSales.Height -= 180;
-                if (containerSalesContainerSales.Height == containerSalesContainerSales.MinimumSize.Height) ;
+                SalesContainer.Height -= 180;
+                if (SalesContainer.Height == SalesContainer.MinimumSize.Height) ;
                 orderCollasped = true;
                 SalseTimer.Stop();
             }
@@ -115,7 +119,7 @@ namespace ITP4915MProject
 
         private void btnItemManagment_Click(object sender, EventArgs e)
         {
-          
+            loadform(new FrmItemList());
         }
 
         private void btn_OrderList_Click(object sender, EventArgs e)
@@ -125,13 +129,9 @@ namespace ITP4915MProject
 
         private void btn_CreateOrder_Click(object sender, EventArgs e)
         {
-            loadform(new FrmCreateOrder());
+            loadform(new FrmCreateOrder(staffID));
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         private void mouse_Down(object sender, MouseEventArgs e)
         {
             mouseOffset = new Point(e.X, e.Y);
@@ -145,19 +145,29 @@ namespace ITP4915MProject
             }
         }
 
-        private void btnJobs_Click(object sender, EventArgs e)
+        private void btnFrmItem_Click(object sender, EventArgs e)
         {
-            SalseTimer.Start();
+            loadform(new FrmItemList());
         }
 
-        private void lblTime_Click(object sender, EventArgs e)
+        private void btnStockRecord_Click(object sender, EventArgs e)
+        {
+            loadform(new FrmDispatchNoteList());
+        }
+
+        private void btnWorks_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void lblTime_Click_1(object sender, EventArgs e)
+        private void btn_Account_Click(object sender, EventArgs e)
         {
+            loadform(new FrmStaffManagment());
+        }
 
+        private void btnInventory_Click(object sender, EventArgs e)
+        {
+            loadform(new FrmStockRecord());
         }
     }
 }

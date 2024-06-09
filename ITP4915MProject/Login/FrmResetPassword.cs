@@ -46,7 +46,5 @@ namespace ITP4915MProject
                 Location = newLocation;
             }
         }
-
-       
     }
 }

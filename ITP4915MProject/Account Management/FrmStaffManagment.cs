@@ -20,6 +20,7 @@ namespace ITP4915MProject
         public FrmStaffManagment()
         {
             InitializeComponent();
+          
         }
         private void BindCbx()
         {
@@ -77,12 +78,11 @@ namespace ITP4915MProject
             BindCbx();
             //binding the datagridview with staffdepartment entity
             BindDgv();
-        }
+            delBindDgv = BindDgv;
 
-        private void grpStaffAccount_Enter(object sender, EventArgs e)
-        {
 
         }
+
     }
 
 

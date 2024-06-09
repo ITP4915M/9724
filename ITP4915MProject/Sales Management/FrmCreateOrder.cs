@@ -15,11 +15,13 @@ namespace ITP4915MProject
     public delegate void DelBindSelectedItem(List<ItemInfo> selectedItems);
     public partial class FrmCreateOrder : Form
     {
+        private string staffID;
         List<ItemInfo> currentItems = new List<ItemInfo>();
         DelBindSelectedItem delitemSelected;
 
-        public FrmCreateOrder()
+        public FrmCreateOrder(string staffID)
         {
+            this.staffID = staffID;
             InitializeComponent();
             dgvOrderItem.CellValidating += new DataGridViewCellValidatingEventHandler(dgvOrderItem_CellValidating);
         }
@@ -30,6 +32,7 @@ namespace ITP4915MProject
             frmOrderAddItem.ShowDialog();
 
         }
+
         public void BindSelectedItem(List<ItemInfo> itemInfos)
         {
 
@@ -40,33 +43,73 @@ namespace ITP4915MProject
             DataGridViewTextBoxColumn amountColumn = new DataGridViewTextBoxColumn();
             amountColumn.Name = "Amount";
             amountColumn.HeaderText = "Amount";
-            amountColumn.ValueType = typeof(int);
+            amountColumn.ValueType = typeof(int); // set the type to integer
+            amountColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; // set content in center
+            amountColumn.Width = 60; // set width
             dgvOrderItem.Columns.Add(amountColumn);
-            dgvOrderItem.Columns["Amount"].ReadOnly = false;
 
+            // default value 1
+            foreach (DataGridViewRow row in dgvOrderItem.Rows)
+            {
+                row.Cells["Amount"].Value = 1;
+            }
+/*            //add the selection box col in the datagrid view
+            DataGridViewCheckBoxColumn chkBoxColumn = new DataGridViewCheckBoxColumn();
+            chkBoxColumn.HeaderText = "Select";
+            chkBoxColumn.Width = 30;
+            chkBoxColumn.Name = "chkBoxColumn";
+            dgvOrderItem.Columns.Insert(0, chkBoxColumn);*/
 
         }
 
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if (cbxDealer.SelectedValue.ToString() == "--Select Dealer--")
+            if (cbxDealer.SelectedValue == null || cbxDealer.SelectedValue.ToString() == "--Select Dealer--")
             {
                 MessageBox.Show("Please Selcect a dealer first", "tips", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            else if (dgvOrderItem == null)
+            else if (dgvOrderItem.Rows.Count == 0)
             {
                 MessageBox.Show("Please Selcect an Item", "tips", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else
             {
+                int totalQuantity = 0;
+                decimal totalPrice = 0m;
+
+                foreach (DataGridViewRow row in dgvOrderItem.Rows)
+                {
+                    // get the amount value
+                    int quantity = 0;
+                    if (row.Cells["Amount"].Value != null)
+                    {
+                        quantity = Convert.ToInt32(row.Cells["Amount"].Value);
+                    }
+
+                    // get the price value
+                    decimal price = 0m;
+                    if (row.Cells["Price"].Value != null)
+                    {
+                        price = Convert.ToDecimal(row.Cells["Price"].Value);
+                    }
+
+                    //count the total quantity
+                    totalQuantity += quantity;
+                    totalPrice += quantity * price; // calculate the totalprice
+                }
                 OrderBLL orderBLL = new OrderBLL();
-                Order newDraftOrder = new Order();
-                newDraftOrder.OrderDate = DateTime.Now;
-                newDraftOrder.DealerID = cbxDealer.SelectedValue.ToString();
-                newDraftOrder.Status = "Pending";
+                Order newPendingOrder = new Order();
+                newPendingOrder.OrderDate = DateTime.Now;
+                newPendingOrder.DealerID = cbxDealer.SelectedValue.ToString();
+                newPendingOrder.Status = "Pending";
+                newPendingOrder.StaffID = GlobalVariables.StaffID;
+                newPendingOrder.TotalItem = totalQuantity;
+                newPendingOrder.OrderAmounts = totalPrice;
+
+
 
                 DialogResult result = MessageBox.Show("Are you sure to save and create an order?", "confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -74,7 +117,7 @@ namespace ITP4915MProject
                 if (result == DialogResult.Yes)
                 {
 
-                    int isAdd = orderBLL.addOrder(newDraftOrder);
+                    int isAdd = orderBLL.addOrder(newPendingOrder);
                     if (isAdd > 0)
                     {
                         MessageBox.Show("Create Order Successful");
@@ -102,10 +145,6 @@ namespace ITP4915MProject
 
             }
 
-
-
-
-
         }
 
         private void FrmCreateOrder_Load(object sender, EventArgs e)
@@ -122,6 +161,7 @@ namespace ITP4915MProject
 
             delitemSelected = BindSelectedItem;
 
+    
 
 
 
@@ -152,21 +192,53 @@ namespace ITP4915MProject
             }
         }
 
-        private void btn_SaveToDraft_Click(object sender, EventArgs e)
-        {
 
+        private void btn_SaveToDraft_Click_1(object sender, EventArgs e)
+        {
             if (cbxDealer.SelectedValue.ToString() == "--Select Dealer--")
             {
                 MessageBox.Show("Please Selcect a dealer first", "tips", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
+            } else if (dgvOrderItem.Rows.Count == 0) {
+                MessageBox.Show("Please Selcect an Item", "tips", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
             else
             {
+                int totalQuantity = 0;
+                decimal totalPrice = 0m;
+
+                foreach (DataGridViewRow row in dgvOrderItem.Rows)
+                {
+                    // 获取数量列的值
+                    int quantity = 0;
+                    if (row.Cells["Amount"].Value != null)
+                    {
+                        quantity = Convert.ToInt32(row.Cells["Amount"].Value);
+                    }
+
+                    // 获取价格列的值
+                    decimal price = 0m;
+                    if (row.Cells["Price"].Value != null)
+                    {
+                        price = Convert.ToDecimal(row.Cells["Price"].Value);
+                    }
+
+                    // 累加总数量和总价格
+                    totalQuantity += quantity;
+                    totalPrice += quantity * price; // 单个商品的总价是数量乘以单价
+                }
+
                 OrderBLL orderBLL = new OrderBLL();
                 Order newDraftOrder = new Order();
                 newDraftOrder.OrderDate = DateTime.Now;
                 newDraftOrder.DealerID = cbxDealer.SelectedValue.ToString();
                 newDraftOrder.Status = "Draft";
+                newDraftOrder.StaffID = staffID;
+                newDraftOrder.TotalItem = totalQuantity;
+                newDraftOrder.OrderAmounts = totalPrice;
+
+
                 int isAdd = orderBLL.addOrder(newDraftOrder);
                 if (isAdd > 0)
                 {
@@ -189,12 +261,7 @@ namespace ITP4915MProject
                     dISets.Add(diset);
                 }
             }
-
-
-
-
-
-
         }
+
     }
 }
