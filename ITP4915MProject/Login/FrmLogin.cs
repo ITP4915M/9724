@@ -125,5 +125,12 @@ namespace ITP4915MProject
         {
 
         }
+
+        private void btnForgerPassword_Click_1(object sender, EventArgs e) //按Forget Password?會彈出視窗
+        {
+            FrmForgetPassword form = new FrmForgetPassword();
+            form.ShowDialog();
+
+        }
     }
 }
