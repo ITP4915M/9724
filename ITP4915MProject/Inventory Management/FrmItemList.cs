@@ -36,6 +36,7 @@ namespace ITP4915MProject
                 catagory = null;
             }
             dgvItemInfo.DataSource = itemInfoBll.GetSearchItem(itemID, itemName, catagory);
+
         }
 
         private void FrmItemList_Load(object sender, EventArgs e)

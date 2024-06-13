@@ -32,7 +32,7 @@ namespace ITP4915MProject
         {
             if (isCollapsed)
             {
-                panelLeft.Width = panelLeft.Width + 10;
+                panelLeft.Width += 10;
                 if (panelLeft.Width >= panelWidth)
                 {
                     Slidetimer1.Stop();
@@ -42,7 +42,7 @@ namespace ITP4915MProject
             }
             else
             {
-                panelLeft.Width = panelLeft.Width - 10;
+                panelLeft.Width -= 10;
                 if (panelLeft.Width <= 55)
                 {
                     Slidetimer1.Stop();
@@ -88,8 +88,6 @@ namespace ITP4915MProject
             this.panMain.Controls.Add(f);
             this.panMain.Tag = f;
             f.Show();
-
-
         }
 
 
@@ -174,5 +172,13 @@ namespace ITP4915MProject
         {
 
         }
+    }
+}
+
+public static class ExtensionMethod
+{
+    public static string JoinString(this IEnumerable<string> sources, string separator)
+    {
+        return string.Join(separator, sources.ToArray());
     }
 }
